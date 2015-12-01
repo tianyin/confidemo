@@ -14,7 +14,7 @@ import static java.lang.annotation.ElementType.PARAMETER;
 public @interface ParamAttr {
   String[] aliases() default {};
   
-  Type type() default Type.STRING;
+  ParamType type() default ParamType.STRING;
   
   // default value
   String defVal();
@@ -26,7 +26,7 @@ public @interface ParamAttr {
   Class<? extends Checker>[] checks() default Checker.class;
   
   // Used for auto-generate the docs
-  Scope scope();
+  ParamScope scope();
   String desc() default "";
 
   String[] depends() default {};
