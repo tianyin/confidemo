@@ -14,10 +14,10 @@ import static java.lang.annotation.ElementType.PARAMETER;
 public @interface ParamAttr {
   String[] aliases() default {};
   
-  Type type() default Type.GENERAL_STRING;
+  Type type() default Type.STRING;
   
   // default value
-  String defVal() default "";
+  String defVal();
   
   boolean mandatory() default false;
   boolean hidden() default false;
